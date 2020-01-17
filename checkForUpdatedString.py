@@ -5,8 +5,17 @@ import codecs
 import mysql.connector
 from mysql.connector import Error
 
+
+def printString(r):
+    length = len(r)
+    strToPrint = ""
+    for char in range(length):
+        strToPrint += "="
+
+    print strToPrint
+
 try:
-    connection = mysql.connector.connect(host='localhost', database='gymnasiearbete', user='garasp', password='Timtaga.Ihyli!Ctwba.')
+    connection = mysql.connector.connect(host='localhost', database='gymnasiearbete', user='garaspberry', password='Timtaga.Ihyli!Ctwba.')
 
     sql_query = "SELECT string FROM raspberries WHERE email LIKE 'johannes.emmoth@gmail.com' AND name LIKE 'Kontorsdörr 1'"
     cursor = connection.cursor()
@@ -27,16 +36,16 @@ try:
             with codecs.open('./screenData.txt', 'w', 'utf-8-sig') as f:
                 f.write(records[0][0])
 
-            print "======================="
+            printString(records[0][0])
             print records[0][0]
-            print "======================="
+            printString(records[0][0])
     except IOError:
         with codecs.open('./screenData.txt', 'w', 'utf-8-sig') as f:
             f.write(records[0][0])
     
-        print "=========================="
+        printString(records[0][0])
         print records[0][0]
-        print "=========================="
+        printString(records[0][0])
  
     # If the file does not exist, create it and write the fetched value to it.
     # After that, print the fetched value

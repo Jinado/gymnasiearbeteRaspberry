@@ -4,16 +4,7 @@
 import codecs
 import mysql.connector
 from mysql.connector import Error
-import os
-
-
-def printString(r):
-    length = len(r)
-    strToPrint = ""
-    for char in range(length):
-        strToPrint += "="
-
-    print strToPrint
+import os§
 
 try:
     connection = mysql.connector.connect(host='jinado.se', database='gymnasiearbete', user='garaspscreen', password='IatRPs.Iwdatm!')
@@ -38,17 +29,13 @@ try:
                 f.write(records[0][0])
 
             os.system("clear")
-            printString(records[0][0])
             print records[0][0]
-            printString(records[0][0])
     except IOError:
         with codecs.open('./screenData.txt', 'w', 'utf-8-sig') as f:
             f.write(records[0][0])
     
         os.system("clear")
-        printString(records[0][0])
         print records[0][0]
-        printString(records[0][0])
  
     # If the file does not exist, create it and write the fetched value to it.
     # After that, print the fetched value

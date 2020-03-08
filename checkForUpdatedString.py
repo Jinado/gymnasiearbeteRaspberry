@@ -15,7 +15,7 @@ def printString(r):
     print strToPrint
 
 try:
-    connection = mysql.connector.connect(host='localhost', database='gymnasiearbete', user='garaspberry', password='Timtaga.Ihyli!Ctwba.')
+    connection = mysql.connector.connect(host='jinado.se', database='gymnasiearbete', user='garaspscreen', password='IatRPs.Iwdatm!')
 
     sql_query = "SELECT string FROM raspberries WHERE email LIKE 'johannes.emmoth@gmail.com' AND name LIKE 'Kontorsdörr 1'"
     cursor = connection.cursor()

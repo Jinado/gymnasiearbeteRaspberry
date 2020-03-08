@@ -4,6 +4,7 @@
 import codecs
 import mysql.connector
 from mysql.connector import Error
+import os
 
 
 def printString(r):
@@ -36,6 +37,7 @@ try:
             with codecs.open('./screenData.txt', 'w', 'utf-8-sig') as f:
                 f.write(records[0][0])
 
+            os.system("clear")
             printString(records[0][0])
             print records[0][0]
             printString(records[0][0])
@@ -43,6 +45,7 @@ try:
         with codecs.open('./screenData.txt', 'w', 'utf-8-sig') as f:
             f.write(records[0][0])
     
+        os.system("clear")
         printString(records[0][0])
         print records[0][0]
         printString(records[0][0])

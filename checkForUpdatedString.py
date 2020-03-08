@@ -4,7 +4,7 @@
 import codecs
 import mysql.connector
 from mysql.connector import Error
-import os§
+import os
 
 try:
     connection = mysql.connector.connect(host='jinado.se', database='gymnasiearbete', user='garaspscreen', password='IatRPs.Iwdatm!')
